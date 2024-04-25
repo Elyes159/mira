@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'package:mira/enseignant/home_enseignant.dart';
+import 'package:mira/enseignant/se_connecter.dart';
 
 class InscriptionPage extends StatefulWidget {
   @override
@@ -150,7 +150,7 @@ class _InscriptionPageState extends State<InscriptionPage> {
                     Center(
                       child: TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushReplacement(
+                          Navigator.of(context).push(
                             MaterialPageRoute(builder: (context) => Ens()),
                           );
                         },

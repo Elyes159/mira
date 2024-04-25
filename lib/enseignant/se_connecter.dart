@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mira/enseignant/home.dart';
 import 'package:mira/enseignant/inscription.dart';
 
 class Ens extends StatefulWidget {
@@ -33,7 +34,7 @@ class _EnsState extends State<Ens> {
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: <Widget>[
                     Image.asset(
-                      'assets/enseignement.png',
+                      'assets/enseigner.png',
                       height: 100,
                     ), // Remplacez 'assets/your_image.png' par le chemin de votre image
                     SizedBox(height: 20.0),
@@ -107,7 +108,10 @@ class _EnsState extends State<Ens> {
                       width: double.infinity,
                       child: MaterialButton(
                         onPressed: () {
-                          // Ajoutez ici le code pour gérer la connexion
+                          Navigator.of(context).pushReplacement(
+                            MaterialPageRoute(
+                                builder: (context) => DashboardPage()),
+                          );
                         },
                         child: Row(
                           mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -143,7 +147,7 @@ class _EnsState extends State<Ens> {
                     Center(
                       child: TextButton(
                         onPressed: () {
-                          Navigator.of(context).pushReplacement(
+                          Navigator.of(context).push(
                             MaterialPageRoute(
                                 builder: (context) => InscriptionPage()),
                           );
