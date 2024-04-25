@@ -69,8 +69,9 @@ class _AdminState extends State<Admin> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                // Action à effectuer lors du clic sur le bouton de connexion
-                // Votre logique de connexion ici
+                Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (context) => Admin()),
+                );
               },
               style: ElevatedButton.styleFrom(
                 foregroundColor: Colors.white,
