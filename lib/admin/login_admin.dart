@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+import 'package:mira/admin/dash_stat.dart';
 
 class Admin extends StatefulWidget {
   @override
@@ -27,9 +28,6 @@ class _AdminState extends State<Admin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text('Admin Login'),
-      ),
       body: Padding(
         padding: EdgeInsets.all(20.0),
         child: Column(
@@ -69,8 +67,8 @@ class _AdminState extends State<Admin> {
             SizedBox(height: 20.0),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).pushReplacement(
-                  MaterialPageRoute(builder: (context) => Admin()),
+                Navigator.of(context).push(
+                  MaterialPageRoute(builder: (context) => AdminDashboardPage()),
                 );
               },
               style: ElevatedButton.styleFrom(

@@ -3,6 +3,7 @@ import 'package:google_fonts/google_fonts.dart';
 import 'package:mira/admin/login_admin.dart';
 import 'package:mira/enseignant/se_connecter.dart';
 import 'package:mira/parent/home_parent.dart';
+import 'package:mira/parent/se_connecter.dart';
 
 class Welcome extends StatelessWidget {
   @override
@@ -46,8 +47,8 @@ class Welcome extends StatelessWidget {
                     'Parent',
                     'assets/parents.png',
                     () {
-                      Navigator.of(context).pushReplacement(
-                        MaterialPageRoute(builder: (context) => Parent()),
+                      Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => ParentLogin()),
                       );
                     },
                     'Accédez au tableau de bord des parents pour suivre le progrès de vos enfants et communiquer avec leurs enseignants.',
@@ -58,7 +59,7 @@ class Welcome extends StatelessWidget {
                     'Enseignant',
                     'assets/enseigner.png',
                     () {
-                      Navigator.of(context).pushReplacement(
+                      Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => Ens()),
                       );
                     },
@@ -70,7 +71,7 @@ class Welcome extends StatelessWidget {
                     'Admin',
                     'assets/admin.png',
                     () {
-                      Navigator.of(context).pushReplacement(
+                      Navigator.of(context).push(
                         MaterialPageRoute(builder: (context) => Admin()),
                       );
                     },
